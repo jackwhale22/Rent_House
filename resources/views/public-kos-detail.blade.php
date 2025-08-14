@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $kos->nama_kos . ' - Kos Finder')
+@section('title', $kos->nama_kos . ' - Rent House')
 
 @section('content')
 <div class="container-fluid glassmorphism-detail">
@@ -29,15 +29,15 @@
                     <!-- Kos Image -->
                     <div class="kos-image-hero">
                         @if($kos->mainPhoto)
-                            <img src="{{ asset($kos->mainPhoto->foto_path) }}" 
-                                 class="hero-image" 
+                            <img src="{{ asset($kos->mainPhoto->foto_path) }}"
+                                 class="hero-image"
                                  alt="{{ $kos->nama_kos }}">
                         @else
                             <div class="hero-image-placeholder">
                                 <i class="fas fa-home"></i>
                             </div>
                         @endif
-                        
+
                         <div class="hero-overlay">
                             <div class="hero-badges">
                                 <span class="verified-badge">
@@ -57,7 +57,7 @@
                         <div class="photo-gallery-grid">
                             @foreach($kos->photos->where('is_main', 0)->take(4) as $photo)
                                 <div class="gallery-item">
-                                    <img src="{{ asset($photo->foto_path) }}" 
+                                    <img src="{{ asset($photo->foto_path) }}"
                                          alt="Foto {{ $kos->nama_kos }}"
                                          class="gallery-image">
                                 </div>
@@ -70,7 +70,7 @@
                         @endif
                     </div>
                     @endif
-                    
+
                     <!-- Kos Content -->
                     <div class="kos-main-content">
                         <div class="kos-header mb-4">
@@ -86,7 +86,7 @@
                                 </span>
                             </div>
                         </div>
-                        
+
                         <!-- Location Section -->
                         <div class="detail-section">
                             <div class="section-header">
@@ -99,7 +99,7 @@
                                 <p class="location-text">{{ $kos->lokasi }}</p>
                             </div>
                         </div>
-                        
+
                         <!-- Facilities Section -->
                         @if($kos->fasilitas)
                             <div class="detail-section">
@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                         @endif
-                        
+
                         <!-- Description Section -->
                         @if($kos->deskripsi)
                             <div class="detail-section">
@@ -142,7 +142,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Owner Info & Contact -->
             <div class="col-lg-4">
                 <!-- Owner Card -->
@@ -151,9 +151,9 @@
                         <div class="owner-icon">
                             <i class="fas fa-user"></i>
                         </div>
-                        <h5 class="card-title">Pemilik Kos</h5>
+                        <h5 class="card-title">Pemilik Kontrakan</h5>
                     </div>
-                    
+
                     <div class="owner-profile">
                         <div class="owner-avatar">
                             <i class="fas fa-user-circle"></i>
@@ -163,7 +163,7 @@
                             <span class="owner-badge">Pemilik Terverifikasi</span>
                         </div>
                     </div>
-                    
+
                     @guest
                         <div class="guest-notice">
                             <div class="notice-icon">
@@ -171,10 +171,10 @@
                             </div>
                             <div class="notice-content">
                                 <strong>Ingin menghubungi pemilik?</strong>
-                                <p>Daftar atau masuk untuk mendapatkan informasi kontak langsung dan terhubung dengan pemilik kos.</p>
+                                <p>Daftar atau masuk untuk mendapatkan informasi kontak langsung dan terhubung dengan pemilik kontrakan.</p>
                             </div>
                         </div>
-                        
+
                         <div class="guest-actions">
                             <a href="{{ route('register') }}" class="glass-btn glass-btn-primary w-100 mb-3">
                                 <i class="fas fa-user-plus me-2"></i>Daftar untuk Menghubungi
@@ -196,14 +196,14 @@
                                 </div>
                             @endif
                         </div>
-                        
+
                         @if(auth()->user()->role == 'penyewa')
                             @php
                                 $existingContact = \App\Models\Transaksi::where('kos_id', $kos->id)
                                                                       ->where('penyewa_id', auth()->id())
                                                                       ->first();
                             @endphp
-                            
+
                             @if($existingContact)
                                 <div class="contact-status">
                                     <div class="status-icon">
@@ -213,7 +213,7 @@
                                         <strong>Sudah Menghubungi</strong>
                                         <p>Anda menghubungi pemilik pada {{ $existingContact->created_at->format('d M Y') }}</p>
                                         <div class="status-badge-wrapper">
-                                            Status: 
+                                            Status:
                                             <span class="status-badge status-{{ $existingContact->status_transaksi }}">
                                                 {{ ucfirst($existingContact->status_transaksi) }}
                                             </span>
@@ -227,13 +227,13 @@
                                         <label for="catatan" class="glass-label">
                                             <i class="fas fa-comment-dots me-2"></i>Pesan (Opsional)
                                         </label>
-                                        <textarea class="glass-textarea" 
-                                                  id="catatan" 
-                                                  name="catatan" 
-                                                  rows="3" 
+                                        <textarea class="glass-textarea"
+                                                  id="catatan"
+                                                  name="catatan"
+                                                  rows="3"
                                                   placeholder="Halo, saya tertarik dengan kos Anda..."></textarea>
                                     </div>
-                                    
+
                                     <button type="submit" class="glass-btn glass-btn-primary contact-btn w-100">
                                         <i class="fas fa-paper-plane me-2"></i>Hubungi Pemilik
                                     </button>
@@ -245,9 +245,9 @@
                                     <i class="fas fa-exclamation-triangle"></i>
                                 </div>
                                 <div class="notice-content">
-                                    <strong>Catatan:</strong> Hanya penyewa yang dapat menghubungi pemilik kos.
+                                    <strong>Catatan:</strong> Hanya penyewa yang dapat menghubungi pemilik kontrakan.
                                     @if(auth()->user()->role == 'pemilik')
-                                        Anda masuk sebagai pemilik kos.
+                                        Anda masuk sebagai pemilik kontrakan.
                                     @else
                                         Anda masuk sebagai administrator.
                                     @endif
@@ -256,7 +256,7 @@
                         @endif
                     @endguest
                 </div>
-                
+
                 <!-- Quick Actions -->
                 <div class="glass-card quick-actions-card">
                     <h6 class="card-title">
@@ -264,7 +264,7 @@
                     </h6>
                     <div class="quick-actions">
                         <a href="{{ route('public.search') }}" class="glass-btn glass-btn-outline w-100 mb-2">
-                            <i class="fas fa-search me-2"></i>Jelajahi Kos Lainnya
+                            <i class="fas fa-search me-2"></i>Jelajahi Kontrakan Lainnya
                         </a>
                         <a href="{{ route('home') }}" class="glass-btn glass-btn-outline w-100">
                             <i class="fas fa-home me-2"></i>Kembali ke Beranda
@@ -299,7 +299,7 @@
                                         ->take(3)
                                         ->get();
         @endphp
-        
+
         @if($similarKos->count() > 0)
             <div class="row mt-5">
                 <div class="col-12">
@@ -311,22 +311,22 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row g-4">
                 @foreach($similarKos as $similar)
                     <div class="col-lg-4">
                         <div class="glass-card similar-card h-100">
                             <div class="similar-image-container">
                                 @if($similar->mainPhoto)
-                                    <img src="{{ asset($similar->mainPhoto->foto_path) }}" 
-                                         class="similar-image" 
+                                    <img src="{{ asset($similar->mainPhoto->foto_path) }}"
+                                         class="similar-image"
                                          alt="{{ $similar->nama_kos }}">
                                 @else
                                     <div class="similar-image-placeholder">
                                         <i class="fas fa-home"></i>
                                     </div>
                                 @endif
-                                
+
                                 <div class="similar-overlay">
                                     <div class="similar-price">
                                         <span class="price-amount">Rp {{ number_format($similar->harga, 0, ',', '.') }}</span>
@@ -334,7 +334,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="similar-content">
                                 <h6 class="similar-title">{{ $similar->nama_kos }}</h6>
                                 <div class="similar-location">
@@ -342,7 +342,7 @@
                                     <span>{{ Str::limit($similar->lokasi, 30) }}</span>
                                 </div>
                             </div>
-                            
+
                             <div class="similar-footer">
                                 <a href="{{ route('public.kos.show', $similar->id) }}" class="glass-btn glass-btn-primary w-100">
                                     <i class="fas fa-eye me-2"></i>Lihat Detail
@@ -388,7 +388,7 @@
         --dark-color: #1f2937;
         --light-color: #f8fafc;
         --white: #ffffff;
-        
+
         /* Glass morphism variables */
         --glass-bg: rgba(255, 255, 255, 0.08);
         --glass-bg-light: rgba(255, 255, 255, 0.12);
@@ -396,7 +396,7 @@
         --glass-border: rgba(255, 255, 255, 0.18);
         --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
         --glass-shadow-hover: 0 20px 60px rgba(31, 38, 135, 0.5);
-        
+
         /* Gradients */
         --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         --gradient-secondary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -420,7 +420,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: 
+        background:
             radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
             radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
             radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);

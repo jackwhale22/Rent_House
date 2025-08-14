@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Detail Pesan - Kos Finder')
+@section('title', 'Detail Pesan - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-detail-pesan">
@@ -119,8 +119,8 @@
                                 </div>
                             </div>
                             <div class="header-info">
-                                <h5 class="card-title">Informasi Kos</h5>
-                                <p class="card-subtitle">Detail kos yang diminati</p>
+                                <h5 class="card-title">Informasi Kontrakan</h5>
+                                <p class="card-subtitle">Detail kontrakan yang diminati</p>
                             </div>
                             <div class="kos-status">
                                 @if($message->kos->status_ketersediaan == 'tersedia')
@@ -152,7 +152,7 @@
                             <div class="info-grid">
                                 <div class="info-item">
                                     <div class="info-label">
-                                        <i class="fas fa-home me-2"></i>Nama Kos
+                                        <i class="fas fa-home me-2"></i>Nama Kontrakan
                                     </div>
                                     <div class="info-value">{{ $message->kos->nama_kos }}</div>
                                 </div>

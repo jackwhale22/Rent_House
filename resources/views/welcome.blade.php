@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Welcome to Kos Finder')
+@section('title', 'Welcome to Rent House')
 
 @section('content')
     <div class="container-fluid p-0 glassmorphism-page">
@@ -25,7 +25,7 @@
                                 Impian Anda
                             </h1>
                             <p class="hero-subtitle mb-4">
-                                Temukan rumah kos yang nyaman dan terjangkau di sekitar Anda.
+                                Temukan rumah kontrakan yang nyaman dan terjangkau di sekitar Anda.
                                 Hubungi langsung dengan pemilik dan dapatkan tempat tinggal ideal.
                             </p>
 
@@ -89,7 +89,7 @@
                                 <i class="fas fa-home"></i>
                             </div>
                             <h3 class="stat-number">{{ $totalKos }}</h3>
-                            <p class="stat-label">Kos Terverifikasi</p>
+                            <p class="stat-label">Kontrakan Terverifikasi</p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -120,7 +120,7 @@
                 <div class="container">
                     <div class="section-header text-center mb-5">
                         <h2 class="section-title">Kos <span class="gradient-text">Unggulan</span></h2>
-                        <p class="section-subtitle">Listing kos terbaru dan terverifikasi</p>
+                        <p class="section-subtitle">Listing kontrakan terbaru dan terverifikasi</p>
                     </div>
 
                     <div class="row g-4">
@@ -181,7 +181,7 @@
 
                     <div class="text-center mt-5">
                         <a href="{{ route('public.search') }}" class="btn glass-btn glass-btn-outline glass-btn-lg">
-                            <i class="fas fa-th me-2"></i>Lihat Semua Kos
+                            <i class="fas fa-th me-2"></i>Lihat Semua Kontrakan
                         </a>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
         <div class="features-section py-5">
             <div class="container">
                 <div class="section-header text-center mb-5">
-                    <h2 class="section-title">Why Choose <span class="gradient-text">Kos Finder?</span></h2>
+                    <h2 class="section-title">Why Choose <span class="gradient-text">Rent House?</span></h2>
                     <p class="section-subtitle">We make finding and managing boarding houses simple and efficient</p>
                 </div>
 
@@ -203,7 +203,7 @@
                                 <i class="fas fa-search"></i>
                             </div>
                             <h5 class="feature-title">Easy Search</h5>
-                            <p class="feature-description">Find kos by location, price range, and facilities with our
+                            <p class="feature-description">Find kontrakan by location, price range, and facilities with our
                                 advanced
                                 search filters.</p>
                         </div>
@@ -242,7 +242,7 @@
                 <div class="glass-card cta-card text-center">
                     <h2 class="cta-title mb-4">Siap untuk <span class="gradient-text">Memulai?</span></h2>
                     @guest
-                        <p class="cta-subtitle mb-4">Bergabunglah dengan ribuan pengguna yang telah menemukan kos impian mereka
+                        <p class="cta-subtitle mb-4">Bergabunglah dengan ribuan pengguna yang telah menemukan kontrakan impian mereka
                             melalui platform kami.</p>
                         <div class="cta-actions">
                             <a href="{{ route('register') }}" class="btn glass-btn glass-btn-primary me-3">
@@ -253,10 +253,10 @@
                             </a>
                         </div>
                     @else
-                        <p class="cta-subtitle mb-4">Selamat datang kembali! Mulai jelajahi kos yang tersedia di area Anda.</p>
+                        <p class="cta-subtitle mb-4">Selamat datang kembali! Mulai jelajahi kontrakan yang tersedia di area Anda.</p>
                         <div class="cta-actions">
                             <a href="{{ route('search') }}" class="btn glass-btn glass-btn-primary">
-                                <i class="fas fa-search me-2"></i>Jelajahi Kos
+                                <i class="fas fa-search me-2"></i>Jelajahi Kontrakan
                             </a>
                         </div>
                     @endguest

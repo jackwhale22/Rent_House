@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Kos Saya - Kos Finder')
+@section('title', 'Kontrakan Saya - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-my-kos">
@@ -15,13 +15,13 @@
                                     <i class="fas fa-building"></i>
                                 </div>
                                 <div class="header-text">
-                                    <h1 class="page-title">Kos Saya</h1>
-                                    <p class="page-subtitle">Kelola semua listing kos Anda dalam satu tempat</p>
+                                    <h1 class="page-title">Kontrakan Saya</h1>
+                                    <p class="page-subtitle">Kelola semua listing kontrakan Anda dalam satu tempat</p>
                                 </div>
                             </div>
                             <div class="header-actions">
                                 <a href="{{ route('pemilik.kos.create') }}" class="glass-btn glass-btn-primary">
-                                    <i class="fas fa-plus me-2"></i>Tambah Kos Baru
+                                    <i class="fas fa-plus me-2"></i>Tambah Kontrakan Baru
                                 </a>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                             <div class="stats-summary">
                                 <div class="stat-item">
                                     <span class="stat-value">{{ $kosList->total() }}</span>
-                                    <span class="stat-label">Total Kos</span>
+                                    <span class="stat-label">Total Kontrakan</span>
                                 </div>
                                 <div class="stat-divider"></div>
                                 <div class="stat-item">
@@ -79,8 +79,8 @@
                                                 <!-- Kos Image -->
                                                 <div class="kos-image-container">
                                                     @if($kos->mainPhoto)
-                                                        <img src="{{ asset($kos->mainPhoto->foto_path) }}" 
-                                                             alt="{{ $kos->nama_kos }}" 
+                                                        <img src="{{ asset($kos->mainPhoto->foto_path) }}"
+                                                             alt="{{ $kos->nama_kos }}"
                                                              class="kos-image">
                                                     @else
                                                         <div class="kos-image-placeholder">
@@ -170,11 +170,11 @@
                                                 <!-- Action Buttons -->
                                                 <div class="kos-card-footer">
                                                     <div class="action-buttons">
-                                                        <a href="{{ route('pemilik.kos.edit', $kos->id) }}" 
+                                                        <a href="{{ route('pemilik.kos.edit', $kos->id) }}"
                                                            class="glass-btn glass-btn-outline flex-fill">
                                                             <i class="fas fa-edit me-2"></i>Edit
                                                         </a>
-                                                        <button type="button" 
+                                                        <button type="button"
                                                                 class="glass-btn glass-btn-danger"
                                                                 onclick="deleteKos({{ $kos->id }}, '{{ $kos->nama_kos }}')"
                                                                 title="Hapus Kos">
@@ -199,7 +199,7 @@
                                                         <i class="fas fa-image me-2"></i>Foto
                                                     </th>
                                                     <th>
-                                                        <i class="fas fa-home me-2"></i>Nama Kos
+                                                        <i class="fas fa-home me-2"></i>Nama Kontrakan
                                                     </th>
                                                     <th>
                                                         <i class="fas fa-map-marker-alt me-2"></i>Lokasi
@@ -224,8 +224,8 @@
                                                         <td>
                                                             <div class="table-image">
                                                                 @if($kos->mainPhoto)
-                                                                    <img src="{{ asset($kos->mainPhoto->foto_path) }}" 
-                                                                         alt="{{ $kos->nama_kos }}" 
+                                                                    <img src="{{ asset($kos->mainPhoto->foto_path) }}"
+                                                                         alt="{{ $kos->nama_kos }}"
                                                                          class="table-kos-image">
                                                                 @else
                                                                     <div class="table-image-placeholder">
@@ -309,13 +309,13 @@
                                                         </td>
                                                         <td>
                                                             <div class="action-buttons">
-                                                                <a href="{{ route('pemilik.kos.edit', $kos->id) }}" 
-                                                                   class="glass-btn-sm glass-btn-primary" 
+                                                                <a href="{{ route('pemilik.kos.edit', $kos->id) }}"
+                                                                   class="glass-btn-sm glass-btn-primary"
                                                                    title="Edit Kos">
                                                                     <i class="fas fa-edit"></i>
                                                                 </a>
-                                                                <button type="button" 
-                                                                        class="glass-btn-sm glass-btn-danger" 
+                                                                <button type="button"
+                                                                        class="glass-btn-sm glass-btn-danger"
                                                                         onclick="deleteKos({{ $kos->id }}, '{{ $kos->nama_kos }}')"
                                                                         title="Hapus Kos">
                                                                     <i class="fas fa-trash"></i>
@@ -344,14 +344,14 @@
                                 <div class="empty-icon">
                                     <i class="fas fa-home"></i>
                                 </div>
-                                <h4 class="empty-title">Belum Ada Kos yang Ditambahkan</h4>
+                                <h4 class="empty-title">Belum Ada Kontrakan yang Ditambahkan</h4>
                                 <p class="empty-description">
-                                    Mulai dengan menambahkan listing kos pertama Anda untuk menarik calon penyewa dan 
-                                    mulai menerima inquiry dari ribuan pengguna Kos Finder.
+                                    Mulai dengan menambahkan listing kontrakan pertama Anda untuk menarik calon penyewa dan
+                                    mulai menerima inquiry dari ribuan pengguna Rent House.
                                 </p>
                                 <div class="empty-actions">
                                     <a href="{{ route('pemilik.kos.create') }}" class="glass-btn glass-btn-primary glass-btn-lg">
-                                        <i class="fas fa-plus me-2"></i>Tambah Kos Pertama
+                                        <i class="fas fa-plus me-2"></i>Tambah Kontrakan Pertama
                                     </a>
                                 </div>
                                 <div class="empty-features">
@@ -388,7 +388,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-text">Apakah Anda yakin ingin menghapus kos <strong id="kosName"></strong>?</p>
+                    <p class="modal-text">Apakah Anda yakin ingin menghapus kontrakan <strong id="kosName"></strong>?</p>
                     <p class="modal-warning">
                         <i class="fas fa-info-circle me-2"></i>
                         Tindakan ini tidak dapat dibatalkan dan akan menghapus semua data terkait termasuk foto dan inquiry yang masuk.
@@ -460,7 +460,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: 
+                background:
                     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
                     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
                     radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
@@ -1814,17 +1814,17 @@
                 badge.addEventListener('mouseenter', function() {
                     const tooltip = document.createElement('div');
                     tooltip.className = 'badge-tooltip';
-                    
+
                     const badgeTitle = this.querySelector('.badge-title').textContent;
                     const badgeSubtitle = this.querySelector('.badge-subtitle').textContent;
-                    
+
                     tooltip.innerHTML = `
                         <div class="tooltip-content">
                             <strong>${badgeTitle}</strong><br>
                             <small>${badgeSubtitle}</small>
                         </div>
                     `;
-                    
+
                     tooltip.style.cssText = `
                         position: absolute;
                         background: rgba(0, 0, 0, 0.9);
@@ -1839,18 +1839,18 @@
                         transition: all 0.3s ease;
                         white-space: nowrap;
                     `;
-                    
+
                     document.body.appendChild(tooltip);
-                    
+
                     const rect = this.getBoundingClientRect();
                     tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
                     tooltip.style.top = rect.bottom + 10 + 'px';
-                    
+
                     setTimeout(() => {
                         tooltip.style.opacity = '1';
                         tooltip.style.transform = 'translateY(0)';
                     }, 10);
-                    
+
                     this.addEventListener('mouseleave', function() {
                         tooltip.style.opacity = '0';
                         tooltip.style.transform = 'translateY(10px)';
@@ -1877,10 +1877,10 @@
                     background-size: 200% 100%;
                     animation: loading 1.5s infinite;
                 `;
-                
+
                 img.parentElement.style.position = 'relative';
                 img.parentElement.appendChild(skeleton);
-                
+
                 img.addEventListener('load', function() {
                     skeleton.style.opacity = '0';
                     setTimeout(() => {
@@ -1913,7 +1913,7 @@
                         <span>${message}</span>
                     </div>
                 `;
-                
+
                 notification.style.cssText = `
                     position: fixed;
                     top: 20px;
@@ -1930,13 +1930,13 @@
                     box-shadow: var(--glass-shadow);
                     max-width: 300px;
                 `;
-                
+
                 document.body.appendChild(notification);
-                
+
                 setTimeout(() => {
                     notification.style.transform = 'translateX(0)';
                 }, 100);
-                
+
                 setTimeout(() => {
                     notification.style.transform = 'translateX(400px)';
                     setTimeout(() => {

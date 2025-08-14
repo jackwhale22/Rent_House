@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'My Profile - Kos Finder')
+@section('title', 'My Profile - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-profile">
@@ -72,7 +72,7 @@
                                         </div>
                                         <div class="badge-content">
                                             <div class="badge-title">PEMILIK</div>
-                                            <div class="badge-subtitle">Pemilik Kos</div>
+                                            <div class="badge-subtitle">Pemilik Kontrakan</div>
                                         </div>
                                         <div class="badge-glow owner-glow"></div>
                                     </div>
@@ -83,7 +83,7 @@
                                         </div>
                                         <div class="badge-content">
                                             <div class="badge-title">PENYEWA</div>
-                                            <div class="badge-subtitle">Pencari Kos</div>
+                                            <div class="badge-subtitle">Pencari Kontrakan</div>
                                         </div>
                                         <div class="badge-glow tenant-glow"></div>
                                     </div>
@@ -182,9 +182,9 @@
                                                 @if(auth()->user()->role == 'admin')
                                                     Administrator Sistem
                                                 @elseif(auth()->user()->role == 'pemilik')
-                                                    Pemilik Kos
+                                                    Pemilik Kontrakan
                                                 @else
-                                                    Pencari Kos
+                                                    Pencari Kontrakan
                                                 @endif
                                             </div>
                                         </div>
@@ -246,7 +246,7 @@
                                                             </div>
                                                             <div class="stat-content">
                                                                 <div class="stat-header">
-                                                                    <h6 class="stat-label">Kos Terverifikasi</h6>
+                                                                    <h6 class="stat-label">Kontrakan Terverifikasi</h6>
                                                                     <div class="stat-trend up">
                                                                         <i class="fas fa-arrow-up"></i>
                                                                     </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard - Kos Finder')
+@section('title', 'Dashboard - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-dashboard">
@@ -16,12 +16,12 @@
                                 </div>
                                 <div class="header-text">
                                     <h1 class="dashboard-title">Welcome back, {{ auth()->user()->name }}!</h1>
-                                    <p class="dashboard-subtitle">Temukan kos impian Anda dan kelola kontak dengan mudah</p>
+                                    <p class="dashboard-subtitle">Temukan kontrakan impian Anda dan kelola kontak dengan mudah</p>
                                 </div>
                             </div>
                             <div class="header-actions">
                                 <a href="{{ route('search') }}" class="glass-btn glass-btn-primary">
-                                    <i class="fas fa-search me-2"></i>Cari Kos
+                                    <i class="fas fa-search me-2"></i>Cari Kontrakan
                                 </a>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <h2 class="stat-number">{{ $totalTransaksi }}</h2>
-                            <p class="stat-description">Pemilik kos dihubungi</p>
+                            <p class="stat-description">Pemilik kontrakan dihubungi</p>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="stat-content">
                             <div class="stat-header">
-                                <h6 class="stat-label">Kos Tersedia</h6>
+                                <h6 class="stat-label">Kontrakan Tersedia</h6>
                                 <div class="stat-trend up">
                                     <i class="fas fa-arrow-up"></i>
                                 </div>
@@ -118,8 +118,8 @@
                         <div class="quick-icon primary">
                             <i class="fas fa-search"></i>
                         </div>
-                        <h6 class="quick-title">Cari Kos</h6>
-                        <p class="quick-description">Temukan kos sesuai kriteria dan budget Anda</p>
+                        <h6 class="quick-title">Cari Kontrakan</h6>
+                        <p class="quick-description">Temukan kontrakan sesuai kriteria dan budget Anda</p>
                         <a href="{{ route('search') }}" class="glass-btn glass-btn-primary w-100">
                             <i class="fas fa-search me-2"></i>Mulai Pencarian
                         </a>
@@ -131,7 +131,7 @@
                             <i class="fas fa-list"></i>
                         </div>
                         <h6 class="quick-title">Kontak Saya</h6>
-                        <p class="quick-description">Lihat riwayat kontak dengan pemilik kos</p>
+                        <p class="quick-description">Lihat riwayat kontak dengan pemilik kontrakan</p>
                         <a href="{{ route('my-transaksi') }}" class="glass-btn glass-btn-outline w-100">
                             <i class="fas fa-list me-2"></i>Lihat Kontak
                         </a>
@@ -159,9 +159,9 @@
                             <div class="d-flex justify-content-between align-items-center flex-wrap">
                                 <div class="header-info">
                                     <h5 class="table-title">
-                                        <i class="fas fa-home me-2"></i>Kos Terbaru
+                                        <i class="fas fa-home me-2"></i>Kontrakan Terbaru
                                     </h5>
-                                    <p class="table-subtitle">Listing kos terbaru yang mungkin Anda sukai</p>
+                                    <p class="table-subtitle">Listing kontrakan terbaru yang mungkin Anda sukai</p>
                                 </div>
                                 <div class="header-actions">
                                     <a href="{{ route('search') }}" class="glass-btn glass-btn-outline">
@@ -254,14 +254,14 @@
                                     <div class="empty-icon">
                                         <i class="fas fa-home"></i>
                                     </div>
-                                    <h5 class="empty-title">Belum Ada Kos Tersedia</h5>
+                                    <h5 class="empty-title">Belum Ada Kontrakan Tersedia</h5>
                                     <p class="empty-description">
-                                        Saat ini belum ada listing kos baru. Coba lakukan pencarian untuk menemukan kos yang
+                                        Saat ini belum ada listing kontrakan baru. Coba lakukan pencarian untuk menemukan kontrakan yang
                                         sesuai
                                     </p>
                                     <div class="empty-actions">
                                         <a href="{{ route('search') }}" class="glass-btn glass-btn-primary">
-                                            <i class="fas fa-search me-2"></i>Cari Kos Sekarang
+                                            <i class="fas fa-search me-2"></i>Cari Kontrakan Sekarang
                                         </a>
                                     </div>
                                 </div>
@@ -282,7 +282,7 @@
                                         <h5 class="table-title">
                                             <i class="fas fa-history me-2"></i>Kontak Terbaru
                                         </h5>
-                                        <p class="table-subtitle">Riwayat kontak dengan pemilik kos</p>
+                                        <p class="table-subtitle">Riwayat kontak dengan pemilik kontrakan</p>
                                     </div>
                                     <div class="header-actions">
                                         <a href="{{ route('my-transaksi') }}" class="glass-btn glass-btn-outline">
@@ -299,7 +299,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>
-                                                        <i class="fas fa-home me-2"></i>Kos
+                                                        <i class="fas fa-home me-2"></i>Kontrakan
                                                     </th>
                                                     <th>
                                                         <i class="fas fa-user-tie me-2"></i>Pemilik

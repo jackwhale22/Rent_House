@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Tambah Kos Baru - Kos Finder')
+@section('title', 'Tambah Kontrakan Baru - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-add-kos">
@@ -15,13 +15,13 @@
                                     <i class="fas fa-plus-circle"></i>
                                 </div>
                                 <div class="header-text">
-                                    <h1 class="page-title">Tambah Kos Baru</h1>
-                                    <p class="page-subtitle">Buat listing kos baru dan jangkau ribuan calon penyewa</p>
+                                    <h1 class="page-title">Tambah Kontrakan Baru</h1>
+                                    <p class="page-subtitle">Buat listing kontrakan baru dan jangkau ribuan calon penyewa</p>
                                 </div>
                             </div>
                             <div class="header-actions">
                                 <a href="{{ route('pemilik.my-kos') }}" class="glass-btn glass-btn-outline">
-                                    <i class="fas fa-arrow-left me-2"></i>Kembali ke Kos Saya
+                                    <i class="fas fa-arrow-left me-2"></i>Kembali ke Kontrakan Saya
                                 </a>
                             </div>
                         </div>
@@ -66,14 +66,14 @@
 
                                 <div class="form-group">
                                     <label for="nama_kos" class="glass-label required">
-                                        <i class="fas fa-home me-2"></i>Nama Kos
+                                        <i class="fas fa-home me-2"></i>Nama Kontrakan
                                     </label>
                                     <div class="glass-input-wrapper">
-                                        <input type="text" 
-                                               class="glass-input @error('nama_kos') is-invalid @enderror" 
-                                               id="nama_kos" 
-                                               name="nama_kos" 
-                                               value="{{ old('nama_kos') }}" 
+                                        <input type="text"
+                                               class="glass-input @error('nama_kos') is-invalid @enderror"
+                                               id="nama_kos"
+                                               name="nama_kos"
+                                               value="{{ old('nama_kos') }}"
                                                placeholder="Contoh: Kos Mawar Indah"
                                                required>
                                         <div class="input-icon">
@@ -96,11 +96,11 @@
                                         <i class="fas fa-map-marker-alt me-2"></i>Lokasi Lengkap
                                     </label>
                                     <div class="glass-input-wrapper">
-                                        <input type="text" 
-                                               class="glass-input @error('lokasi') is-invalid @enderror" 
-                                               id="lokasi" 
-                                               name="lokasi" 
-                                               value="{{ old('lokasi') }}" 
+                                        <input type="text"
+                                               class="glass-input @error('lokasi') is-invalid @enderror"
+                                               id="lokasi"
+                                               name="lokasi"
+                                               value="{{ old('lokasi') }}"
                                                placeholder="Jl. Sudirman No. 123, Jakarta Pusat"
                                                required>
                                         <div class="input-icon">
@@ -126,12 +126,12 @@
                                                 <i class="fas fa-map-pin me-2"></i>Latitude
                                             </label>
                                             <div class="glass-input-wrapper">
-                                                <input type="number" 
+                                                <input type="number"
                                                        step="any"
-                                                       class="glass-input @error('latitude') is-invalid @enderror" 
-                                                       id="latitude" 
-                                                       name="latitude" 
-                                                       value="{{ old('latitude') }}" 
+                                                       class="glass-input @error('latitude') is-invalid @enderror"
+                                                       id="latitude"
+                                                       name="latitude"
+                                                       value="{{ old('latitude') }}"
                                                        placeholder="-6.2088">
                                                 <div class="input-icon">
                                                     <i class="fas fa-map-marker"></i>
@@ -150,12 +150,12 @@
                                                 <i class="fas fa-map-pin me-2"></i>Longitude
                                             </label>
                                             <div class="glass-input-wrapper">
-                                                <input type="number" 
+                                                <input type="number"
                                                        step="any"
-                                                       class="glass-input @error('longitude') is-invalid @enderror" 
-                                                       id="longitude" 
-                                                       name="longitude" 
-                                                       value="{{ old('longitude') }}" 
+                                                       class="glass-input @error('longitude') is-invalid @enderror"
+                                                       id="longitude"
+                                                       name="longitude"
+                                                       value="{{ old('longitude') }}"
                                                        placeholder="106.8456">
                                                 <div class="input-icon">
                                                     <i class="fas fa-map-marker"></i>
@@ -187,11 +187,11 @@
                                         <i class="fas fa-money-bill-wave me-2"></i>Harga per Bulan (Rp)
                                     </label>
                                     <div class="glass-input-wrapper">
-                                        <input type="number" 
-                                               class="glass-input @error('harga') is-invalid @enderror" 
-                                               id="harga" 
-                                               name="harga" 
-                                               value="{{ old('harga') }}" 
+                                        <input type="number"
+                                               class="glass-input @error('harga') is-invalid @enderror"
+                                               id="harga"
+                                               name="harga"
+                                               value="{{ old('harga') }}"
                                                min="0"
                                                step="50000"
                                                placeholder="1500000"
@@ -227,7 +227,7 @@
                                     <h4 class="step-title">
                                         <i class="fas fa-clipboard-list me-2"></i>Detail & Media
                                     </h4>
-                                    <p class="step-subtitle">Tambahkan fasilitas, deskripsi, dan foto kos</p>
+                                    <p class="step-subtitle">Tambahkan fasilitas, deskripsi, dan foto kontrakan</p>
                                 </div>
 
                                 <div class="form-group">
@@ -235,9 +235,9 @@
                                         <i class="fas fa-star me-2"></i>Fasilitas
                                     </label>
                                     <div class="glass-textarea-wrapper">
-                                        <textarea class="glass-textarea @error('fasilitas') is-invalid @enderror" 
-                                                  id="fasilitas" 
-                                                  name="fasilitas" 
+                                        <textarea class="glass-textarea @error('fasilitas') is-invalid @enderror"
+                                                  id="fasilitas"
+                                                  name="fasilitas"
                                                   rows="4"
                                                   placeholder="AC, WiFi, Kamar Mandi Dalam, Kasur, Lemari, Meja Belajar">{{ old('fasilitas') }}</textarea>
                                     </div>
@@ -268,9 +268,9 @@
                                         <i class="fas fa-align-left me-2"></i>Deskripsi
                                     </label>
                                     <div class="glass-textarea-wrapper">
-                                        <textarea class="glass-textarea @error('deskripsi') is-invalid @enderror" 
-                                                  id="deskripsi" 
-                                                  name="deskripsi" 
+                                        <textarea class="glass-textarea @error('deskripsi') is-invalid @enderror"
+                                                  id="deskripsi"
+                                                  name="deskripsi"
                                                   rows="5"
                                                   placeholder="Deskripsikan kos Anda secara detail, lingkungan sekitar, dan keunggulan yang ditawarkan...">{{ old('deskripsi') }}</textarea>
                                         <div class="character-count">
@@ -291,13 +291,13 @@
                                 <!-- Foto Utama -->
                                 <div class="form-group">
                                     <label class="glass-label required">
-                                        <i class="fas fa-camera me-2"></i>Foto Utama Kos
+                                        <i class="fas fa-camera me-2"></i>Foto Utama Kontrakan
                                     </label>
                                     <div class="glass-file-upload" id="mainPhotoUpload">
-                                        <input type="file" 
-                                               class="file-input @error('foto_utama') is-invalid @enderror" 
-                                               id="fotoUtama" 
-                                               name="foto_utama" 
+                                        <input type="file"
+                                               class="file-input @error('foto_utama') is-invalid @enderror"
+                                               id="fotoUtama"
+                                               name="foto_utama"
                                                accept="image/*"
                                                required>
                                         <div class="upload-area">
@@ -334,10 +334,10 @@
                                         <i class="fas fa-images me-2"></i>Foto Tambahan
                                     </label>
                                     <div class="glass-file-upload" id="additionalPhotosUpload">
-                                        <input type="file" 
-                                               class="file-input @error('foto.*') is-invalid @enderror" 
-                                               id="fotoTambahan" 
-                                               name="foto[]" 
+                                        <input type="file"
+                                               class="file-input @error('foto.*') is-invalid @enderror"
+                                               id="fotoTambahan"
+                                               name="foto[]"
                                                accept="image/*"
                                                multiple>
                                         <div class="upload-area">
@@ -386,7 +386,7 @@
 
                                 <div class="review-card">
                                     <div class="review-header">
-                                        <h5>Preview Listing Kos Anda</h5>
+                                        <h5>Preview Listing Kontrakan Anda</h5>
                                     </div>
                                     <div class="review-content">
                                         <div class="review-image">
@@ -399,7 +399,7 @@
                                         </div>
                                         <div class="review-details">
                                             <div class="review-item">
-                                                <label>Nama Kos:</label>
+                                                <label>Nama Kontrakan:</label>
                                                 <span id="reviewNama">-</span>
                                             </div>
                                             <div class="review-item">
@@ -429,7 +429,7 @@
                                     <div class="notice-content">
                                         <h6>Catatan Penting:</h6>
                                         <ul>
-                                            <li>Listing kos Anda akan direview oleh tim admin sebelum ditampilkan</li>
+                                            <li>Listing kontrakan Anda akan direview oleh tim admin sebelum ditampilkan</li>
                                             <li>Proses verifikasi biasanya memakan waktu 1-2 hari kerja</li>
                                             <li>Pastikan semua informasi yang dimasukkan sudah benar</li>
                                             <li>Anda akan mendapat notifikasi via email saat listing disetujui</li>
@@ -443,7 +443,7 @@
                                     </button>
                                     <button type="submit" class="glass-btn glass-btn-primary submit-btn">
                                         <i class="fas fa-save me-2"></i>
-                                        <span class="btn-text">Simpan Kos</span>
+                                        <span class="btn-text">Simpan Kontrakan</span>
                                         <span class="btn-loading" style="display: none;">
                                             <i class="fas fa-spinner fa-spin me-2"></i>Menyimpan...
                                         </span>
@@ -540,7 +540,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: 
+                background:
                     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
                     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
                     radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
@@ -1689,7 +1689,7 @@
             function removeAdditionalPhoto(button) {
                 const photoItem = button.closest('.photo-item');
                 photoItem.remove();
-                
+
                 // Reset file input if all photos are removed
                 if (additionalPhotosPreview.children.length === 0) {
                     fotoTambahan.value = '';
@@ -1698,10 +1698,10 @@
 
             // Update Review
             function updateReview() {
-                document.getElementById('reviewNama').textContent = 
+                document.getElementById('reviewNama').textContent =
                     document.getElementById('nama_kos').value || '-';
 
-                document.getElementById('reviewLokasi').textContent = 
+                document.getElementById('reviewLokasi').textContent =
                     document.getElementById('lokasi').value || '-';
 
                 const harga = document.getElementById('harga').value;
@@ -1716,10 +1716,10 @@
                     document.getElementById('reviewHarga').textContent = '-';
                 }
 
-                document.getElementById('reviewFasilitas').textContent = 
+                document.getElementById('reviewFasilitas').textContent =
                     document.getElementById('fasilitas').value || '-';
 
-                document.getElementById('reviewDeskripsi').textContent = 
+                document.getElementById('reviewDeskripsi').textContent =
                     document.getElementById('deskripsi').value || '-';
 
                 // Update image preview
@@ -1801,45 +1801,45 @@
             // Initialize Map
             let map;
             let marker;
-            
+
             function initMap() {
                 // Default center (Indonesia)
                 const defaultLat = -6.2088;
                 const defaultLng = 106.8456;
-                
+
                 // Create map
                 map = L.map('map').setView([defaultLat, defaultLng], 13);
-                
+
                 // Add tile layer (OpenStreetMap)
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '© OpenStreetMap contributors'
                 }).addTo(map);
-                
+
                 // Add marker if coordinates exist
                 const lat = document.getElementById('latitude').value;
                 const lng = document.getElementById('longitude').value;
                 if (lat && lng) {
                     setMarker([lat, lng]);
                 }
-                
+
                 // Handle map click
                 map.on('click', function(e) {
                     const lat = e.latlng.lat;
                     const lng = e.latlng.lng;
-                    
+
                     // Update form inputs
                     document.getElementById('latitude').value = lat.toFixed(6);
                     document.getElementById('longitude').value = lng.toFixed(6);
-                    
+
                     // Update marker
                     setMarker([lat, lng]);
                 });
-                
+
                 // Handle coordinate input changes
                 document.getElementById('latitude').addEventListener('input', updateMapFromInputs);
                 document.getElementById('longitude').addEventListener('input', updateMapFromInputs);
             }
-            
+
             function setMarker(latlng) {
                 if (marker) {
                     marker.setLatLng(latlng);
@@ -1848,11 +1848,11 @@
                 }
                 map.setView(latlng);
             }
-            
+
             function updateMapFromInputs() {
                 const lat = parseFloat(document.getElementById('latitude').value);
                 const lng = parseFloat(document.getElementById('longitude').value);
-                
+
                 if (!isNaN(lat) && !isNaN(lng)) {
                     setMarker([lat, lng]);
                 }

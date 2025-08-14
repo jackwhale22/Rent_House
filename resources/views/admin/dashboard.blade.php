@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Admin Dashboard - Kos Finder')
+@section('title', 'Admin Dashboard - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-dashboard">
@@ -21,7 +21,7 @@
                             </div>
                             <div class="header-actions">
                                 <a href="{{ route('admin.verify-kos') }}" class="glass-btn glass-btn-primary">
-                                    <i class="fas fa-check-circle me-2"></i>Verifikasi Kos
+                                    <i class="fas fa-check-circle me-2"></i>Verifikasi Kontrakan
                                 </a>
                             </div>
                         </div>
@@ -58,13 +58,13 @@
                         </div>
                         <div class="stat-content">
                             <div class="stat-header">
-                                <h6 class="stat-label">Total Kos</h6>
+                                <h6 class="stat-label">Total Kontrakan</h6>
                                 <div class="stat-trend up">
                                     <i class="fas fa-arrow-up"></i>
                                 </div>
                             </div>
                             <h2 class="stat-number">{{ $totalKos }}</h2>
-                            <p class="stat-description">Semua listing kos</p>
+                            <p class="stat-description">Semua listing kontrakan</p>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                         </div>
                         <div class="stat-content">
                             <div class="stat-header">
-                                <h6 class="stat-label">Pemilik Kos</h6>
+                                <h6 class="stat-label">Pemilik Kontrakan</h6>
                                 <div class="stat-trend up">
                                     <i class="fas fa-arrow-up"></i>
                                 </div>
@@ -188,8 +188,8 @@
                                         <i class="fas fa-check-circle"></i>
                                     </div>
                                     <div class="quick-action-content">
-                                        <h6 class="quick-action-title">Verifikasi Kos</h6>
-                                        <p class="quick-action-subtitle">{{ $pendingKos }} kos menunggu</p>
+                                        <h6 class="quick-action-title">Verifikasi Kontrakan</h6>
+                                        <p class="quick-action-subtitle">{{ $pendingKos }} kontrakan menunggu</p>
                                     </div>
                                     <div class="quick-action-arrow">
                                         <i class="fas fa-chevron-right"></i>

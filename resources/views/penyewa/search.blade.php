@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Cari Kos - Kos Finder')
+@section('title', 'Cari Kontrakan - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-browse">
@@ -9,9 +9,9 @@
             <div class="row mb-5">
                 <div class="col-12 text-center">
                     <h1 class="page-title mb-3">
-                        <span class="gradient-text">Cari</span> Kos Impian Anda
+                        <span class="gradient-text">Cari</span> Kontrakan Impian Anda
                     </h1>
-                    <p class="page-subtitle">Temukan kos yang sesuai dengan kebutuhan dan budget Anda</p>
+                    <p class="page-subtitle">Temukan kontrakan yang sesuai dengan kebutuhan dan budget Anda</p>
                 </div>
             </div>
 
@@ -205,17 +205,17 @@
                             <div class="no-results-icon">
                                 <i class="fas fa-search"></i>
                             </div>
-                            <h4 class="no-results-title">Tidak Ada Kos Ditemukan</h4>
+                            <h4 class="no-results-title">Tidak Ada Kontrakan Ditemukan</h4>
                             @if(request()->hasAny(['search', 'lokasi', 'min_price', 'max_price']))
                                 <p class="no-results-text mb-4">
-                                    Coba sesuaikan kriteria pencarian Anda atau hapus filter untuk melihat semua kos yang tersedia.
+                                    Coba sesuaikan kriteria pencarian Anda atau hapus filter untuk melihat semua kontrakan yang tersedia.
                                 </p>
                                 <a href="{{ route('search') }}" class="glass-btn glass-btn-primary">
                                     <i class="fas fa-times me-2"></i>Hapus Filter
                                 </a>
                             @else
                                 <p class="no-results-text mb-4">
-                                    Tidak ada kos terverifikasi yang tersedia saat ini. Silakan cek kembali nanti.
+                                    Tidak ada kontrakan terverifikasi yang tersedia saat ini. Silakan cek kembali nanti.
                                 </p>
                                 <a href="{{ route('dashboard') }}" class="glass-btn glass-btn-primary">
                                     <i class="fas fa-home me-2"></i>Kembali ke Dashboard
@@ -244,7 +244,7 @@
                                             <i class="fas fa-search"></i>
                                         </div>
                                         <h6 class="tip-title">Kata Kunci</h6>
-                                        <p class="tip-description">Gunakan kata kunci spesifik seperti nama kos atau area
+                                        <p class="tip-description">Gunakan kata kunci spesifik seperti nama kontrakan atau area
                                         </p>
                                     </div>
                                 </div>
@@ -272,7 +272,7 @@
                                             <i class="fas fa-star"></i>
                                         </div>
                                         <h6 class="tip-title">Fasilitas</h6>
-                                        <p class="tip-description">Perhatikan fasilitas yang disediakan setiap kos</p>
+                                        <p class="tip-description">Perhatikan fasilitas yang disediakan setiap kontrakan</p>
                                     </div>
                                 </div>
                             </div>

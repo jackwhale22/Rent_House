@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Verifikasi Kos - Dashboard Admin')
+@section('title', 'Verifikasi Kontrakan - Dashboard Admin')
 
 @section('content')
     <div class="container-fluid glassmorphism-verification">
@@ -15,8 +15,8 @@
                                     <i class="fas fa-check-circle"></i>
                                 </div>
                                 <div class="header-text">
-                                    <h1 class="page-title">Verifikasi Kos</h1>
-                                    <p class="page-subtitle">Tinjau dan verifikasi listing kos yang menunggu persetujuan
+                                    <h1 class="page-title">Verifikasi Kontrakan</h1>
+                                    <p class="page-subtitle">Tinjau dan verifikasi listing kontrakan yang menunggu persetujuan
                                         ({{ $pendingKos->total() }} menunggu)</p>
                                 </div>
                             </div>
@@ -116,11 +116,11 @@
 
                                 <div class="col-md-4">
                                     <label class="glass-label">
-                                        <i class="fas fa-search me-2"></i>Cari Kos
+                                        <i class="fas fa-search me-2"></i>Cari Kontrakan
                                     </label>
                                     <div class="glass-input-wrapper">
                                         <input type="text" class="glass-input" id="searchInput"
-                                            placeholder="Cari berdasarkan nama kos atau pemilik...">
+                                            placeholder="Cari berdasarkan nama kontrakan atau pemilik...">
                                         <div class="input-icon">
                                             <i class="fas fa-search"></i>
                                         </div>
@@ -296,7 +296,7 @@
                                                                 class="d-inline approve-form">
                                                                 @csrf
                                                                 <button type="submit" class="glass-btn glass-btn-success action-btn"
-                                                                    onclick="return confirm('Apakah Anda yakin ingin menyetujui kos ini?')">
+                                                                    onclick="return confirm('Apakah Anda yakin ingin menyetujui kontrakan ini?')">
                                                                     <i class="fas fa-check me-2"></i>Setujui
                                                                 </button>
                                                             </form>
@@ -330,7 +330,7 @@
                                                         <i class="fas fa-calendar-alt me-2"></i>Tanggal
                                                     </th>
                                                     <th>
-                                                        <i class="fas fa-home me-2"></i>Kos
+                                                        <i class="fas fa-home me-2"></i>Kontrakan
                                                     </th>
                                                     <th>
                                                         <i class="fas fa-user me-2"></i>Pemilik
@@ -504,7 +504,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title">
                         <i class="fas fa-home text-primary me-2"></i>
-                        Detail Kos
+                        Detail Kontrakan
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                 </div>
@@ -532,10 +532,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-text">Apakah Anda yakin ingin menolak kos <strong id="rejectKosName"></strong>?</p>
+                    <p class="modal-text">Apakah Anda yakin ingin menolak kontrakan <strong id="rejectKosName"></strong>?</p>
                     <p class="modal-warning">
                         <i class="fas fa-info-circle me-2"></i>
-                        Tindakan ini akan menghapus listing kos secara permanen dan tidak dapat dibatalkan. Pemilik perlu
+                        Tindakan ini akan menghapus listing kontrakan secara permanen dan tidak dapat dibatalkan. Pemilik perlu
                         mengajukan ulang jika ingin mendaftarkan properti ini kembali.
                     </p>
                 </div>

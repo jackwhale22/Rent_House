@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $kos->nama_kos . ' - Kos Finder')
+@section('title', $kos->nama_kos . ' - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-detail">
@@ -15,7 +15,7 @@
                     </li>
                     <li class="breadcrumb-item">
                         <a href="{{ route('search') }}">
-                            <i class="fas fa-search me-1"></i>Cari Kos
+                            <i class="fas fa-search me-1"></i>Cari Kontrakan
                         </a>
                     </li>
                     <li class="breadcrumb-item active">{{ $kos->nama_kos }}</li>
@@ -56,7 +56,7 @@
                             <div class="photos-grid">
                                 @foreach($kos->photos->where('is_main', 0)->take(4) as $photo)
                                     <div class="gallery-item">
-                                        <img src="{{ asset($photo->foto_path) }}" 
+                                        <img src="{{ asset($photo->foto_path) }}"
                                              alt="Foto {{ $kos->nama_kos }}"
                                              class="gallery-image"
                                              onclick="showFullImage('{{ asset($photo->foto_path) }}', '{{ $kos->nama_kos }}')">
@@ -69,7 +69,8 @@
                                 </div>
                             @endif
                         </div>
-                        @endif                        <!-- Kos Content -->
+                        @endif
+                        <!-- Kos Content -->
                         <div class="kos-main-content">
                             <div class="kos-header mb-4">
                                 <h1 class="kos-title">{{ $kos->nama_kos }}</h1>
@@ -283,7 +284,7 @@
                     <div class="col-12">
                         <div class="section-header-large mb-4">
                             <h4 class="section-title-large">
-                                <span class="gradient-text">Kos Serupa</span> di Area Ini
+                                <span class="gradient-text">Kontrakan Serupa</span> di Area Ini
                             </h4>
                             <p class="section-subtitle-large">Temukan pilihan lain yang mungkin Anda sukai</p>
                         </div>
@@ -1487,11 +1488,11 @@
                 const modal = document.getElementById('photoModal');
                 const modalImg = document.getElementById('modalImage');
                 const modalCaption = document.getElementById('modalCaption');
-                
+
                 modal.style.display = 'block';
                 modalImg.src = src;
                 modalCaption.textContent = caption;
-                
+
                 document.body.style.overflow = 'hidden';
             }
 

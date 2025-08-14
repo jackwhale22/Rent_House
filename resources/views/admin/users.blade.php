@@ -57,7 +57,7 @@
                         </div>
                         <div class="stat-content">
                             <div class="stat-header">
-                                <h6 class="stat-label">Pemilik Kos</h6>
+                                <h6 class="stat-label">Pemilik Kontrakan</h6>
                                 <div class="stat-trend up">
                                     <i class="fas fa-arrow-up"></i>
                                 </div>
@@ -198,7 +198,7 @@
                                                                     </div>
                                                                     <div class="badge-content">
                                                                         <div class="badge-title">PEMILIK</div>
-                                                                        <div class="badge-subtitle">Pemilik Kos</div>
+                                                                        <div class="badge-subtitle">Pemilik Kontrakan</div>
                                                                     </div>
                                                                     <div class="badge-glow owner-glow"></div>
                                                                 </div>

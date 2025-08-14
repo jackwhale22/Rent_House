@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Pesan Saya - Kos Finder')
+@section('title', 'Pesan Saya - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-dashboard">
@@ -16,12 +16,12 @@
                                 </div>
                                 <div class="header-text">
                                     <h1 class="page-title">Pesan Saya</h1>
-                                    <p class="page-subtitle">Kelola komunikasi dengan pemilik kos</p>
+                                    <p class="page-subtitle">Kelola komunikasi dengan pemilik kontrakan</p>
                                 </div>
                             </div>
                             <div class="header-actions">
                                 <a href="{{ route('search') }}" class="glass-btn glass-btn-primary">
-                                    <i class="fas fa-search me-2"></i>Cari Kos
+                                    <i class="fas fa-search me-2"></i>Cari Kontrakan
                                 </a>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                                     <h5 class="table-title">
                                         <i class="fas fa-inbox me-2"></i>Daftar Pesan
                                     </h5>
-                                    <p class="table-subtitle">Komunikasi dengan pemilik kos</p>
+                                    <p class="table-subtitle">Komunikasi dengan pemilik kontrakan</p>
                                 </div>
                                 @if($messages->count() > 0)
                                     <div class="header-actions">
@@ -177,8 +177,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="message-actions">
-                                                    <a href="{{ route('my-messages.detail', $message->id) }}" 
-                                                       class="glass-btn-sm glass-btn-primary" 
+                                                    <a href="{{ route('my-messages.detail', $message->id) }}"
+                                                       class="glass-btn-sm glass-btn-primary"
                                                        title="Lihat Detail">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
@@ -265,11 +265,11 @@
                                     </div>
                                     <h5 class="empty-title">Belum Ada Pesan</h5>
                                     <p class="empty-description">
-                                        Pesan balasan dari pemilik kos akan muncul di sini setelah Anda menghubungi mereka.
+                                        Pesan balasan dari pemilik kontrakan akan muncul di sini setelah Anda menghubungi mereka.
                                     </p>
                                     <div class="empty-actions">
                                         <a href="{{ route('search') }}" class="glass-btn glass-btn-primary">
-                                            <i class="fas fa-search me-2"></i>Cari Kos Sekarang
+                                            <i class="fas fa-search me-2"></i>Cari Kontrakan Sekarang
                                         </a>
                                     </div>
                                 </div>

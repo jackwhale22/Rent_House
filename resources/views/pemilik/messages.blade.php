@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Kelola Pesan - Kos Finder')
+@section('title', 'Kelola Pesan - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-messages">
@@ -16,7 +16,7 @@
                                 </div>
                                 <div class="header-text">
                                     <h1 class="page-title">Kelola Pesan</h1>
-                                    <p class="page-subtitle">Kelola dan balas pesan dari calon penyewa kos Anda</p>
+                                    <p class="page-subtitle">Kelola dan balas pesan dari calon penyewa kontrakan Anda</p>
                                 </div>
                             </div>
                             <div class="header-stats">
@@ -303,7 +303,7 @@
                                                         <i class="fas fa-user me-2"></i>Penyewa
                                                     </th>
                                                     <th>
-                                                        <i class="fas fa-home me-2"></i>Kos
+                                                        <i class="fas fa-home me-2"></i>Kontrakan
                                                     </th>
                                                     <th>
                                                         <i class="fas fa-comment me-2"></i>Pesan
@@ -463,15 +463,15 @@
                                 </div>
                                 <h4 class="empty-title">Belum Ada Pesan</h4>
                                 <p class="empty-description">
-                                    Pesan dari calon penyewa yang tertarik dengan kos Anda akan muncul di sini.
-                                    Pastikan listing kos Anda aktif dan menarik untuk mendapat lebih banyak inquiry.
+                                    Pesan dari calon penyewa yang tertarik dengan kontrakan Anda akan muncul di sini.
+                                    Pastikan listing kontrakan Anda aktif dan menarik untuk mendapat lebih banyak inquiry.
                                 </p>
                                 <div class="empty-actions">
                                     <a href="{{ route('pemilik.my-kos') }}" class="glass-btn glass-btn-primary">
-                                        <i class="fas fa-building me-2"></i>Lihat Kos Saya
+                                        <i class="fas fa-building me-2"></i>Lihat Kontrakan Saya
                                     </a>
                                     <a href="{{ route('pemilik.kos.create') }}" class="glass-btn glass-btn-outline">
-                                        <i class="fas fa-plus me-2"></i>Tambah Kos Baru
+                                        <i class="fas fa-plus me-2"></i>Tambah Kontrakan Baru
                                     </a>
                                 </div>
                             </div>

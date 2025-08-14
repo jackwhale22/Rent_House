@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Kontak Saya - Kos Finder')
+@section('title', 'Kontak Saya - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-dashboard">
@@ -16,12 +16,12 @@
                                 </div>
                                 <div class="header-text">
                                     <h1 class="page-title">Kontak Saya</h1>
-                                    <p class="page-subtitle">Kelola riwayat kontak dengan pemilik kos</p>
+                                    <p class="page-subtitle">Kelola riwayat kontak dengan pemilik kontrakan</p>
                                 </div>
                             </div>
                             <div class="header-actions">
                                 <a href="{{ route('search') }}" class="glass-btn glass-btn-primary">
-                                    <i class="fas fa-search me-2"></i>Cari Kos Lagi
+                                    <i class="fas fa-search me-2"></i>Cari Kontrakan Lagi
                                 </a>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                     <h5 class="table-title">
                                         <i class="fas fa-list me-2"></i>Riwayat Kontak
                                     </h5>
-                                    <p class="table-subtitle">Daftar semua kontak dengan pemilik kos</p>
+                                    <p class="table-subtitle">Daftar semua kontak dengan pemilik kontrakan</p>
                                 </div>
                                 @if($transaksis->count() > 0)
                                     <div class="header-actions">
@@ -152,7 +152,7 @@
                                                     </div>
                                                     <div class="owner-details">
                                                         <h6 class="owner-name">{{ $transaksi->kos->pemilik->name }}</h6>
-                                                        <div class="owner-role">Pemilik Kos</div>
+                                                        <div class="owner-role">Pemilik Kontrakan</div>
                                                         <div class="contact-details">
                                                             <div class="contact-item">
                                                                 <i class="fas fa-envelope contact-icon"></i>
@@ -243,12 +243,12 @@
                                     </div>
                                     <h5 class="empty-title">Belum Ada Kontak</h5>
                                     <p class="empty-description">
-                                        Anda belum menghubungi pemilik kos manapun. Mulai dengan mencari kos yang menarik minat
+                                        Anda belum menghubungi pemilik kontrakan manapun. Mulai dengan mencari kontrakan yang menarik minat
                                         Anda.
                                     </p>
                                     <div class="empty-actions">
                                         <a href="{{ route('search') }}" class="glass-btn glass-btn-primary">
-                                            <i class="fas fa-search me-2"></i>Cari Kos Sekarang
+                                            <i class="fas fa-search me-2"></i>Cari Kontrakan Sekarang
                                         </a>
                                     </div>
                                 </div>
@@ -272,7 +272,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="modal-text">Apakah Anda yakin ingin membatalkan kontak dengan kos <strong
+                    <p class="modal-text">Apakah Anda yakin ingin membatalkan kontak dengan kontrakan <strong
                             id="cancelKosName"></strong>?</p>
                     <p class="modal-warning">
                         <i class="fas fa-info-circle me-2"></i>

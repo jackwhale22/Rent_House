@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Detail Pesan - Kos Finder')
+@section('title', 'Detail Pesan - Rent House')
 
 @section('content')
     <div class="container-fluid glassmorphism-dashboard">
@@ -16,7 +16,7 @@
                                 </div>
                                 <div class="header-text">
                                     <h1 class="page-title">Detail Pesan</h1>
-                                    <p class="page-subtitle">Lihat dan balas pesan dengan pemilik kos</p>
+                                    <p class="page-subtitle">Lihat dan balas pesan dengan pemilik kontrakan</p>
                                 </div>
                             </div>
                             <div class="header-actions">
@@ -82,9 +82,9 @@
                                 </div>
                                 <div>
                                     <h5 class="card-title">
-                                        <i class="fas fa-building me-2"></i>Informasi Kos
+                                        <i class="fas fa-building me-2"></i>Informasi Kontrakan
                                     </h5>
-                                    <p class="card-subtitle">Detail lengkap kos yang Anda hubungi</p>
+                                    <p class="card-subtitle">Detail lengkap kontrakan yang Anda hubungi</p>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                                 <div class="col-md-6">
                                     <div class="info-item">
                                         <div class="info-label">
-                                            <i class="fas fa-home me-2"></i>Nama Kos
+                                            <i class="fas fa-home me-2"></i>Nama Kontrakan
                                         </div>
                                         <div class="info-value">{{ $message->kos->nama_kos }}</div>
                                     </div>
@@ -115,7 +115,7 @@
                                     </div>
                                     <div class="info-item">
                                         <div class="info-label">
-                                            <i class="fas fa-user-tie me-2"></i>Pemilik Kos
+                                            <i class="fas fa-user-tie me-2"></i>Pemilik Kontrakan
                                         </div>
                                         <div class="info-value">{{ $message->kos->pemilik->name }}</div>
                                     </div>
@@ -135,7 +135,7 @@
                                     <h5 class="card-title">
                                         <i class="fas fa-comments me-2"></i>Percakapan
                                     </h5>
-                                    <p class="card-subtitle">Riwayat komunikasi dengan pemilik kos</p>
+                                    <p class="card-subtitle">Riwayat komunikasi dengan pemilik kontrakan</p>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +196,7 @@
                                         </div>
                                         <div class="no-reply-content">
                                             <h6>Menunggu Balasan</h6>
-                                            <p>Pemilik kos belum membalas pesan Anda. Pesan akan muncul di sini setelah pemilik
+                                            <p>Pemilik kontrakan belum membalas pesan Anda. Pesan akan muncul di sini setelah pemilik
                                                 memberikan balasan.</p>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@
                                     <h5 class="card-title">
                                         <i class="fas fa-reply me-2"></i>Balas Pesan
                                     </h5>
-                                    <p class="card-subtitle">Kirim balasan kepada pemilik kos</p>
+                                    <p class="card-subtitle">Kirim balasan kepada pemilik kontrakan</p>
                                 </div>
                             </div>
                         </div>
@@ -260,7 +260,7 @@
                                     <h5 class="card-title">
                                         <i class="fas fa-user me-2"></i>Informasi Pemilik
                                     </h5>
-                                    <p class="card-subtitle">Kontak pemilik kos</p>
+                                    <p class="card-subtitle">Kontak pemilik kontrakan</p>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +271,7 @@
                                 </div>
                                 <div class="owner-info">
                                     <h6 class="owner-name">{{ $message->kos->pemilik->name }}</h6>
-                                    <span class="owner-badge">Pemilik Kos</span>
+                                    <span class="owner-badge">Pemilik Kontrakan</span>
                                 </div>
                             </div>
 
