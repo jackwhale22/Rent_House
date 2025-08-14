@@ -4406,6 +4406,7 @@
 #63 D:\\Filmora\\kos-finder-final\\kos-finder-terbaru(perbaikan)\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\Filmora\\\\kos-...')
 #64 {main}
 "} 
+<<<<<<< HEAD
 [2025-08-14 15:50:01] production.ERROR: SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `kos` where `is_verified` = 1 and `status_ketersediaan` = tersedia order by `created_at` desc limit 6) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `kos` where `is_verified` = 1 and `status_ketersediaan` = tersedia order by `created_at` desc limit 6) at /app/vendor/laravel/framework/src/Illuminate/Database/Connection.php:829)
 [stacktrace]
 #0 /app/vendor/laravel/framework/src/Illuminate/Database/Connection.php(983): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -4668,3 +4669,5 @@
 #66 /app/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/app/public/ind...')
 #67 {main}
 "} 
+=======
+>>>>>>> ea27ac1b349aa0f1e6517de821d15fc82dcd75ba
